@@ -110,7 +110,8 @@
   .submit:hover{background:var(--blue-deep);color:var(--cream)}
   .sent{background:var(--white);color:var(--ink);padding:20px 22px;display:grid;gap:12px;font-weight:400}
   .sent .btn{justify-self:start;background:var(--blue);color:var(--cream)}
-  footer{background:var(--cream);color:var(--blue);text-align:center;font-size:14px;padding-block:0 32px}
+  footer{background:var(--cream);color:var(--blue);padding-block:0 28px}
+  .foot{display:flex;justify-content:space-between;align-items:baseline;gap:8px 24px;flex-wrap:wrap;font-family:var(--body);font-weight:300;font-style:italic;font-size:15px}
 
   /* ---------- SMALL SCREENS ---------- */
   @media (max-width:760px){
@@ -229,8 +230,8 @@
           <label for="f-email">E-mail</label>
           <input id="f-email" name="email" type="email" placeholder="E-mail" autocomplete="email" required>
           <details class="multi" id="f-goals">
-            <summary><span class="multi-text" data-empty="What do you want to work on? (choose any)">What do you want to work on? (choose any)</span></summary>
-            <div class="opts" role="group" aria-label="What do you want to work on?">
+            <summary><span class="multi-text" data-empty="What are your goals?">What are your goals?</span></summary>
+            <div class="opts" role="group" aria-label="What are your goals?">
               <label class="opt"><input type="checkbox" value="Lose body fat"><span>Lose body fat</span></label>
               <label class="opt"><input type="checkbox" value="Build muscle"><span>Build muscle</span></label>
               <label class="opt"><input type="checkbox" value="Get stronger"><span>Get stronger</span></label>
@@ -252,7 +253,7 @@
     </div>
   </section>
 </main>
-<footer><p>Base with Ruby · Personal training in Sofia</p></footer>
+<footer><div class="wrap foot"><p>© Base with Ruby 2026</p><p>Personal training in Sofia</p></div></footer>
 
 <script>
   const multi=document.getElementById('f-goals');
