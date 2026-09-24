@@ -69,13 +69,12 @@
   .method-top{display:grid;grid-template-columns:1fr auto;gap:12px 20px;align-items:start;max-width:980px;margin-left:auto}
   .method-top h2{grid-column:2;font-size:clamp(40px,5.2vw,68px);color:var(--blue)}
   .method-intro{grid-column:1;grid-row:2;text-align:right;align-self:start;max-width:28em;justify-self:end;font-weight:400}
-  .method-photo{grid-column:2;grid-row:2;width:clamp(140px,19vw,250px);aspect-ratio:1/1;object-fit:cover;object-position:50% 40%}
-  .pillars{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(24px,4vw,64px);margin-top:clamp(28px,4vw,48px);align-items:end}
-  .pillar{display:grid;grid-template-rows:auto auto 1fr auto;gap:.5em;height:100%}
+  .method-photo{grid-column:2;grid-row:2;justify-self:start;width:0;min-width:74%;aspect-ratio:1/1;object-fit:cover;object-position:50% 40%;margin-left:.06em;font-size:clamp(40px,5.2vw,68px)}
+  .pillars{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(24px,4vw,64px);margin-top:clamp(28px,4vw,48px);grid-template-rows:auto auto 1fr auto;row-gap:0}
+  .pillar{display:grid;grid-row:span 4;grid-template-rows:subgrid;row-gap:.5em}
   .pillar h3{font-size:clamp(17px,1.7vw,22px);color:var(--blue);line-height:1.05;align-self:end}
   .pillar p{font-weight:400;max-width:15em}
   .pillar .num{font-family:var(--head);font-stretch:125%;font-weight:800;font-style:normal;font-size:16px;justify-self:end;margin-top:.6em}
-  .pillar:nth-child(2){margin-top:-1.2em}
 
   /* ---------- PRICING ---------- */
   .pricing{position:relative;padding-block:clamp(56px,8vw,110px) 0}
@@ -130,10 +129,10 @@
     .method-top{grid-template-columns:1fr auto;gap:12px 14px}
     .method-top h2{grid-column:1 / -1;justify-self:end}
     .method-intro{grid-column:1;grid-row:2;align-self:center;font-size:15px;line-height:1.4}
-    .method-photo{grid-column:2;grid-row:2;width:clamp(110px,34vw,150px)}
+    .method-photo{grid-column:2;grid-row:2;width:clamp(110px,34vw,150px);min-width:0}
     .pillars{grid-template-columns:1fr;gap:28px}
-    .pillar:nth-child(2){margin-top:0}
-    .pillar{grid-template-rows:auto;position:relative;padding-left:30px}
+    .pillars{grid-template-rows:none}
+    .pillar{grid-row:auto;grid-template-rows:auto;position:relative;padding-left:30px}
     .pillar .num{position:absolute;left:0;top:.1em;margin:0}
     .price-grid{grid-template-columns:1fr}
     .card{min-height:0}
